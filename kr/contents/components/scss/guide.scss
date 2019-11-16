@@ -1,0 +1,135 @@
+@charset "utf-8";
+// site common utils
+@import "../../../../assets/scss_renewal/ds_core/importer";
+
+/* 가이드 페이지용 스타일 */
+.img-box {
+    text-align: center;
+    figure {
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            color: #fff;
+            font-size: 60px;
+        }
+    }
+}
+
+.sec-kv  {
+    width: 100%; height: calc(100vh - 70px);
+    text-align: center;
+    background-color: #7F7F7F;
+
+    h1 {
+        font-size: 100px;
+        color: #000;
+
+        @media screen and (max-width: 750px) {
+            font-size: 20vw;
+        }
+    }
+}
+
+.sec-1 {
+    width: 100%;
+    text-align: center;
+    background-color: #5b5b5b;
+    p {
+        text-align: left;
+        color: #fff;
+    }
+}
+
+.sec-2 {
+    .img-container {
+        padding-top: 42.85%;
+    }
+}
+
+.sec-3 {
+    .cols-container:nth-child(1) {
+        .img-container{
+            padding-top: 42.85%;
+
+            @include break-point($mobile) {
+                padding-top: 60%;
+            }
+        }
+    }
+    .cols-container:nth-child(2) {
+        .img-container{
+            padding-top: 100%;
+            figure {background-color: #959595;}
+        }
+    }
+}
+
+.sec-4 {
+    .img-container{
+        padding-top: 137%;
+        figure {background-color: #646464;}
+
+        @include break-point($mobile) {
+            padding-top: 100%;
+        }
+    }
+}
+
+.sec-7 {
+    .img-container{
+        padding-top: 42.85%;
+    }
+}
+
+.sec-8 {
+    .cols-container {
+        .cols-4 {
+            &:first-child {
+                .img-container {
+                    padding-top: 142%;
+                    figure {background-color: #222;}
+                }
+            }
+            &:last-child {
+                .img-container {
+                    padding-top: 70%;
+                    figure {background-color: #959595;}
+                }
+            }
+        }
+    }
+}
+
+//그리드를 벗어나는 예제(정식 컴포넌트 아님)
+.ex-test-grid{
+    position: relative;
+    .img-container{
+        @include per-convert-pc(padding-top, 628,1920);
+    }
+
+    .roll{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+        div{
+            width:100%; height:100%;
+            background: rgba(red,0.5);
+        }
+    }
+    .txt-holder{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+}

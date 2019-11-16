@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>seolran lee</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Share -->
+    <meta name="title" content="Keeping Children Safe and Happy">
+    <meta name="description" content="아이와의 행복한 공존을 위한 디자인은 가족 구성원인 아이를 배려하는 것에서 출발한다. 냉장고와 세탁기, 에어컨 등 우리가 매일 접하는 제품에는 이러한 배려와 고민이 담겨있다.">
+    <meta name="keywords" content="삼성, 삼성전자, 디자인, 배려 디자인, 어린이, 인덕션, 어린이 보호기능, 스마트싱스 트래커, 스마트싱스, 트래커, 아가사랑 세탁기, 무풍 에어컨, 패밀리 허브, 키즈홈, F9000, 키즈존, 생활가전">
+    <link rel="image_src" href="http://design.samsung.com/kr/share/thumb/contents/share_thumb_153_200x200.jpg">
+    <!-- Share for Facebook -->
+    <meta property="og:title" content="Keeping Children Safe and Happy">
+
+    <meta property="og:description" content="아이와의 행복한 공존을 위한 디자인은 가족 구성원인 아이를 배려하는 것에서 출발한다. 냉장고와 세탁기, 에어컨 등 우리가 매일 접하는 제품에는 이러한 배려와 고민이 담겨있다.">
+    <meta property="og:image" content="http://design.samsung.com/kr/share/thumb/contents/share_thumb_153_200x200.jpg">
+    <meta property="og:type" content="website">
+    <!-- Share for Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Keeping Children Safe and Happy">
+    <meta name="twitter:description" content="아이와의 행복한 공존을 위한 디자인은 가족 구성원인 아이를 배려하는 것에서 출발한다. 냉장고와 세탁기, 에어컨 등 우리가 매일 접하는 제품에는 이러한 배려와 고민이 담겨있다.">
+    <meta name="twitter:image" content="http://design.samsung.com/kr/share/thumb/contents/share_thumb_153_200x200.jpg">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../../../assets/css/common_module_renewal.css">
+    <link rel="stylesheet" href="../../../assets/css/contents_components.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <!--JS-->
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/detectizr.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/detect.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/plugin/jquery.bxslider.min.js"></script>
+
+    <!-- threejs -->
+    <script type="text/javascript" src="https://threejs.org/build/three.min.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        void main() {
+            gl_Position = vec4( position, 1.0 );
+        }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform vec2    u_resolution;
+        uniform float   u_time;
+
+        uniform float     alpha;
+        uniform vec2      speed;
+        uniform float     shift;
+
+        void main() {
+            vec2 st = gl_FragCoord.xy/u_resolution.xy;
+
+            vec3 c[5];
+            c[0] = vec3(124.0/255.0, 112.0/255.0, 114.0/255.0);
+            c[1] =  vec3(220.0/255.0, 99.0/255.0, 26.0/255.0);
+            c[2] = vec3(124.0/255.0, 112.0/255.0, 114.0/255.0);
+            c[3] =  vec3(25.0/255.0, 67.0/255.0, 117.0/255.0);
+            c[4] =  vec3(124.0/255.0, 112.0/255.0, 114.0/255.0);
+
+            vec2 p[5];
+            p[0] = vec2(0.1, 1.2);
+            p[1] = vec2(1.2, 0.4);
+            p[2] = vec2(0.1, -0.3);
+            p[3] = vec2(cos(u_time/1.0), sin(u_time/1.0)*3.0) * 0.2 + vec2(0.5, 0.5);
+            p[4] = vec2(cos(u_time/2.0), sin(u_time/2.0)*3.0) * 0.2 + vec2(1.0, 1.5);
+
+            float blend = 4.0;
+
+            float w[4];
+            vec3 sum = vec3(0.0);
+            float valence = 0.0;
+
+            for (int i = 0; i < 4; i++) {
+                float distance = length( st - p[i]);
+                if (distance == 0.0) { distance = 1.0; }
+                float w =  1.0 / pow(distance, blend);
+                sum += w * c[i];
+                valence += w;
+            }
+
+            sum /= valence;
+            sum = pow(sum, vec3(2.0));
+
+            // output
+
+            gl_FragColor = vec4(sum.xyz, 1.0);
+        }
+
+    </script>
+
+</head>
+<body class="components">
+<div id="skip-navi">
+    <a href="#container">SKIP NAVIGATION</a>
+</div>
+
+<div id="wrap" class="minify">
+    <header>
+        <a href="index.html">
+            <span>SEOLRAN LEE</span>
+        </a>
+    </header>
+    <!--컨텐츠 페이지 디폴트-->
+    <!--HEADER : S-->
+    <!--<div class="header_wrap"></div>-->
+    <!--HEADER : E-->
+    <div id="container">
+        <!--<div id="loader">-->
+            <!--<div class="loader-box"></div>-->
+        <!--</div>-->
+        <div id="content" class="detail galaxys10">
+            <div class="dim-holder"></div>
+            <section class="sec-kv" id="section-kv">
+                <div class="cols-container">
+                    <div class="section-title">
+                        <div class="cols-container">
+                            <div class="cols-4 title-wrap-cols ml-3-col">
+                                <h1 class="txt-1">
+                                    <span>A Journey</span>
+                                </h1>
+                                <h1 class="txt-2">
+                                    <span>to the Self</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-1 space-mt-100">
+                        <div class="cols-container">
+                            <div class="cols-4 ml-3-col">
+                                <p class="txt-paragraph-small">
+                                    갤럭시 s9에 적용된 UI인 SE9을 소개하기위한 페이지 구축에 참혀하였다. 키비쥬얼은 Shader를 활용하였다. 이 컨텐츠는 기존의 디자인 철학과 스토리를 다루던 디자인 삼성 컨텐츠와는 다르게 UI 기능에 대한 설명과 사용자의 인터페이스 사용 과정을 모션으로 구현해야 하는 어려움이 있었다. 초반 시작부터 모션이 들어갈 것을 세밀히 고려한 마크업이 이루어질 필요가 있었고 이를 통해 모션을 위한 효과적인 디자인 작업물과 마크업 설계에 대한 고민을 하게 되었다. 가로스크롤로 풀어내었던 사이트였고 기존의 세로 스크롤 타이밍에 맞춰 모션의 트리거를 잡던 작업을 모두 가로로 바꾸어 작업하였다. UI의 동작과정을 나타낸 모션이 많아 세밀한 마이크로 모션이 많이 적용된 사이트이다.
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content-2 space-mt-100">
+                        <div class="cols-container">
+                            <!--<div class="cols-1 ml-3-col">-->
+                                <!--<dl>-->
+                                    <!--<dt class="txt-paragraph-small talign-c">ROLE</dt>-->
+                                    <!--<dd class="talign-c space-mt-30">Frontend Developer</dd>-->
+                                <!--</dl>-->
+                            <!--</div>-->
+                            <div class="cols-1 ml-3-col">
+                                <dl>
+                                    <dt class="txt-paragraph-small talign-c">TECHNOLOGIES</dt>
+                                    <dd class="talign-c space-mt-30">html, js, jQuery, sass, Shader</dd>
+                                </dl>
+                            </div>
+                            <div class="cols-1">
+                                <dl>
+                                    <dt class="txt-paragraph-small talign-c">CLIENTS</dt>
+                                    <dd class="talign-c space-mt-30">DESIGN SAMSUNG</dd>
+                                </dl>
+                            </div>
+                            <div class="cols-1">
+                                <dl>
+                                    <dt class="txt-paragraph-small talign-c">DEVICE</dt>
+                                    <dd class="talign-c space-mt-30">Responsive</dd>
+                                </dl>
+                            </div>
+                            <div class="cols-1">
+                                <dl>
+                                    <dt class="txt-paragraph-small talign-c">VISIT SITE</dt>
+                                    <dd class="talign-c space-mt-30">
+                                        <a href="http://design.samsung.com/kr/contents/se9/" target="_blank">Samsung Experience 9</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-1" id="section-1">
+                <div class="content-1 no-calc">
+                    <div class="cols-container">
+                        <div class="cols-8 ml-1-col">
+                            <div class="img-container img-1 motion" motion-pos="0.1">
+                                <div class="img-box fade-in">
+                                    <figure class="mod-covered-bg">
+                                        <figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="img-container img-2 space-mt-100 motion" motion-pos="0.1">
+                                <div class="img-box fade-in">
+                                    <figure class="mod-covered-bg">
+                                        <figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!--<div class="img-container img-3 space-mt-100 motion" motion-pos=0.4>-->
+                                <!--<div class="img-box zoom-out">-->
+                                    <!--<figure class="mod-covered-bg">-->
+                                        <!--<figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>-->
+                                    <!--</figure>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class="cols-container space-mt-300 bottom-container">
+                        <div class="has-bg-con" style="height: 500px;">
+                            <div class="cols-container motion" motion-pos="0.4">
+                                <div class="is-full">
+                                    <div class="img-container" id="shader-box" style="height: 100%;padding: 0;">
+                                        <div class="img-box" id="img-box">
+                                            <figure class="mod-covered-bg" style="background-image: none;"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cols-3 txt-wrap-cols ml-2-col" style="padding-top: 250px;">
+                                    <h3 class="txt-kv-tit-bold">
+                                        <a href="galaxyshome.html">Next Project</a>
+                                    </h3>
+                                    <p class="txt-sub-tit space-mt-24">
+                                        <a href="galaxyshome.html">Galaxy home</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</div>
+<!--<script type="text/javascript" src="../../../assets/js/common/header.js"></script>-->
+<!--<script type="text/javascript" src="../../../assets/js/common/footer.js"></script>-->
+<!--<script type="text/javascript" src="../../../assets/js/common/related_stories.js"></script>-->
+<script type="text/javascript" src="js/motion.js"></script>
+<script type="text/javascript" src="js/detail.js"></script>
+<script type="text/javascript" src="js/shader.js"></script>
+
+</body>
+</html>

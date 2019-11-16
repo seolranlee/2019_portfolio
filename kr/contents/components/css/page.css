@@ -1,0 +1,88 @@
+/* temp contents styles */
+@media only screen and (min-width: 768px) and (max-width: 1280px) { .code { width: 90% !important; } }
+@media only screen and (max-width: 767.7px) { .type-tit { padding: 15px 4% !important; }
+  .type-tit span { display: block; }
+  .code { width: 92% !important; } }
+.img-box { text-align: center; }
+.img-box figure:before { display: inline-block; content: ''; width: 0; height: 100%; vertical-align: middle; }
+.img-box figure span { display: inline-block; vertical-align: middle; color: #fff; font-size: 60px; }
+
+.sec-kv { width: 100%; height: calc(100vh - 70px); text-align: center; background-color: #7F7F7F; }
+.sec-kv h1 { font-size: 100px; color: #000; }
+@media screen and (max-width: 750px) { .sec-kv h1 { font-size: 20vw; } }
+
+.sec-1 { width: 100%; height: calc(100vh - 70px); text-align: center; background-color: #5b5b5b; }
+.sec-1 p { text-align: left; color: #fff; }
+
+.img-rolling.onTrans li { -webkit-animation: us2kz0716 10.8s infinite; -moz-animation: us2kz0716 10.8s infinite; -ms-animation: us2kz0716 10.8s infinite; -o-animation: us2kz0716 10.8s infinite; animation: us2kz0716 10.8s infinite; }
+.img-rolling.onTrans li:nth-child(1) { -webkit-animation-delay: 7.2s; -moz-animation-delay: 7.2s; -ms-animation-delay: 7.2s; -o-animation-delay: 7.2s; animation-delay: 7.2s; }
+.img-rolling.onTrans li:nth-child(2) { -webkit-animation-delay: 3.6s; -moz-animation-delay: 3.6s; -ms-animation-delay: 3.6s; -o-animation-delay: 3.6s; animation-delay: 3.6s; }
+@-webkit-keyframes us2kz0716 { 0%,
+            27.7777777778%,
+            100% { opacity: 1; visibility: visible; }
+  33.3333333333%,
+            94.4444444444% { opacity: 0; visibility: hidden; } }
+@-moz-keyframes us2kz0716 { 0%,
+            27.7777777778%,
+            100% { opacity: 1; visibility: visible; }
+  33.3333333333%,
+            94.4444444444% { opacity: 0; visibility: hidden; } }
+@-ms-keyframes us2kz0716 { 0%,
+            27.7777777778%,
+            100% { opacity: 1; visibility: visible; }
+  33.3333333333%,
+            94.4444444444% { opacity: 0; visibility: hidden; } }
+@-o-keyframes us2kz0716 { 0%,
+            27.7777777778%,
+            100% { opacity: 1; visibility: visible; }
+  33.3333333333%,
+            94.4444444444% { opacity: 0; visibility: hidden; } }
+@keyframes us2kz0716 { 0%,
+            27.7777777778%,
+            100% { opacity: 1; visibility: visible; }
+  33.3333333333%,
+            94.4444444444% { opacity: 0; visibility: hidden; } }
+/* motion */
+.motion.zoom-out { opacity: 0; filter: alpha(opacity=0); -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); }
+.motion.zoom-out.onTrans { opacity: 1; filter: alpha(opacity=100); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); -webkit-transition: -webkit-transform 1s 0s ease-in-out, opacity 1s; -moz-transition: -moz-transform 1s 0s ease-in-out, opacity 1s; -ms-transition: -ms-transform 1s 0s ease-in-out, opacity 1s; -o-transition: -o-transform 1s 0s ease-in-out, opacity 1s; transition: transform 1s 0s ease-in-out, opacity 1s; }
+.motion.fade-in { opacity: 0; filter: alpha(opacity=0); }
+.motion.fade-in.onTrans { opacity: 1; filter: alpha(opacity=100); -webkit-transition: -webkit-transform 1s 0s ease-in-out, opacity 1s; -moz-transition: -moz-transform 1s 0s ease-in-out, opacity 1s; -ms-transition: -ms-transform 1s 0s ease-in-out, opacity 1s; -o-transition: -o-transform 1s 0s ease-in-out, opacity 1s; transition: transform 1s 0s ease-in-out, opacity 1s; }
+.motion.slide-in-up { opacity: 0; filter: alpha(opacity=0); -webkit-transform: translateY(2vw); -moz-transform: translateY(2vw); -ms-transform: translateY(2vw); -o-transform: translateY(2vw); transform: translateY(2vw); }
+.motion.slide-in-up.onTrans { opacity: 1; filter: alpha(opacity=100); -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); -webkit-transition: -webkit-transform 1s 0s ease-in-out, opacity 1s; -moz-transition: -moz-transform 1s 0s ease-in-out, opacity 1s; -ms-transition: -ms-transform 1s 0s ease-in-out, opacity 1s; -o-transition: -o-transform 1s 0s ease-in-out, opacity 1s; transition: transform 1s 0s ease-in-out, opacity 1s; }
+
+/*.img-box { @include transform-origin(50%, 50%); &.motion{@include opacity(0);@include transform(scale(1.1));} &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.is-full { .img-box { &.motion {@include opacity(1);@include transform(scale(1.1));} &.onTrans {@include opacity(1);@include transform(scale(1));@include transform-css-transition(1, 0, ease-in-out, opacity 1s);} }
+}
+.txt-tit-bd { &.motion{@include opacity(0);} &.onTrans {@include opacity(1); @include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.txt-sub-tit-bd { &.motion{@include opacity(0);} &.onTrans {@include opacity(1); @include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.txt-tit-centered { &.motion {@include opacity(0); @include transform(translateY($txtSpace));} &.onTrans {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.txt-paragraph-big { &.motion{@include opacity(0);} &.onTrans {@include opacity(1);@include transform(translateY(0));@include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.txt-paragraph-sml { &.motion{@include opacity(0); @include transform(translateY($txtSpace));} &.onTrans {@include opacity(1);@include transform(translateY(0));@include transform-css-transition(1, 0, ease-in-out, opacity 1s);}
+}
+.txt-disclaimer { &.motion{@include opacity(0); @include transform(translateY($txtSpace));} &.onTrans {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(1, 0.4, ease-in-out, opacity 1s 0.4s);}
+}
+
+
+// in grouping
+.motion { .img-box {@include transform-origin(50%, 50%); @include opacity(0); @include transform(scale(1.1));}
+ &.is-full { .img-box {@include opacity(1); @include transform(scale(1.1));} }
+ .txt-tit-bd {@include opacity(0);}
+ .txt-sub-tit-bd {@include opacity(0);}
+ .txt-tit-centered {@include opacity(0); @include transform(translateY($txtSpace));}
+ .txt-paragraph-big {@include opacity(0);}
+ .txt-paragraph-sml {@include opacity(0); @include transform(translateY($txtSpace));}
+ .txt-disclaimer {@include opacity(0); @include transform(translateY($txtSpace));}
+ // container control &.onTrans { .img-box { @include opacity(1); @include transform(scale(1)); @include transform-css-transition(1, 0, ease-in-out, opacity 1s); }
+ &.is-full { .img-box { @include opacity(1); @include transform(scale(1)); @include transform-css-transition(2, 0, ease-in-out, opacity 2s); } }
+ .txt-tit-bd {@include opacity(1); @include transform-css-transition(1, 0, ease-in-out, opacity 1s);} .txt-sub-tit-bd {@include opacity(1); @include transform-css-transition(1, 0, ease-in-out, opacity 1s);} .txt-paragraph-big {@include opacity(1);@include transform-css-transition(1, 0.4, ease-in-out, opacity 1s 0.4s);} .txt-paragraph-sml {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(1, 0.4, ease-in-out, opacity 1s 0.4s);} .txt-disclaimer {@include opacity(1); @include transform(translateY(0)); @include transform-css-transition(1, 0.4, ease-in-out, opacity 1s 0.4s);}
+ }
+}*/
+.related-stories-wrap.onShow .component-list li .title, .related-stories-wrap.onShow .component-list li .desc, .related-stories-wrap.onShow .component-list li .date { opacity: 1; filter: alpha(opacity=100); -webkit-transition: -webkit-transform 1.2s 0.4s ease-in-out, opacity 1.2s 0.4s; -moz-transition: -moz-transform 1.2s 0.4s ease-in-out, opacity 1.2s 0.4s; -ms-transition: -ms-transform 1.2s 0.4s ease-in-out, opacity 1.2s 0.4s; -o-transition: -o-transform 1.2s 0.4s ease-in-out, opacity 1.2s 0.4s; transition: transform 1.2s 0.4s ease-in-out, opacity 1.2s 0.4s; }
+.related-stories-wrap.onShow .component-list li .img .item { opacity: 1; filter: alpha(opacity=100); -webkit-transition: -webkit-transform 1.2s 0s ease-in-out, opacity 1.2s; -moz-transition: -moz-transform 1.2s 0s ease-in-out, opacity 1.2s; -ms-transition: -ms-transform 1.2s 0s ease-in-out, opacity 1.2s; -o-transition: -o-transform 1.2s 0s ease-in-out, opacity 1.2s; transition: transform 1.2s 0s ease-in-out, opacity 1.2s; }
+
+/*# sourceMappingURL=page.css.map */

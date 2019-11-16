@@ -1,0 +1,33 @@
+{
+  "name": "DesignSamsung",
+  "author": "DF VID",
+  "version": "1.0.0",
+  "homepage": "http://design.samsung.com",
+  "description": "builder for DS",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {},
+  "content-list": [
+    "samsung-design-philosophy",
+    "one-ui",
+    "galaxy-s10",
+    "galaxy-fold",
+    "milano2019-teaser",
+    "milanoportal"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "^2.26.3",
+    "clean": "^4.0.1",
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-css-replace-url": "^0.2.4",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-strip-css-comments": "^1.2.0",
+    "gulp-url-replace": "^1.0.2"
+  },
+  "dependencies": {}
+}

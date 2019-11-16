@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* RESET */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var, b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup, menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;vertical-align:baseline}
+dl,ul,ol,menu,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{table-layout:fixed;border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0 none;vertical-align:middle}
+hr{display:none}
+input,select,textarea,button,label{vertical-align:middle;font-family:inherit}
+input,select,textarea{border:1px #bdbdbd solid}
+input[type=radio],input[type=checkbox]{width:13px;height:13px;margin:0;padding:0;border:none;vertical-align:middle}
+textarea{resize:none;}
+button{border:0 none;background-color:transparent;cursor:pointer}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+legend, caption{text-indent:-9999px;top:-9999px;left:-9999px;height:0}
+a,a:hover,a:active,a:visited{text-decoration:none;color:#000;}
+/* h */
+h1, h2, h3, h4, h5, h6, h7 { margin:0; padding:0;  font-weight:normal;}
+strong, b {  font-weight:normal;}
+/*Common*/
+.wa{text-indent:-9999px;position:absolute;top:-9999px;font-size:0;}
+body{overflow-y:scroll;}
+/*NEW STYLE*/
+#wrap{width:100%;}
+.skip_nav{display:block;position:fixed;top:-80px;width:100%;height:80px;line-height:80px;background:#000;color:#fff;text-align:center;}
+.skip_nav:focus{top:0;z-index:9999999;}
+
+#content{}
+/*구 컨텐츠 보정*/
+#content.old_version{position:relative;width:1280px;height:900px;margin:0 auto;}
+#content.old_version_list{position:relative;width:1280px;height:auto;min-height:900px;margin:0 auto;}
+.old_version .sns-bns{top:-9999px;}
+.old_version_list .sns-bns{top:-9999px;}
+
+#container{
+    padding-top: 70px;
+}
+
+/*@import "transitions";
+@import "common_mixin";
+@import "header";
+@import "footer";
+@import "related_stories";
+*/
+@import "../scss_renewal/module";
+
+

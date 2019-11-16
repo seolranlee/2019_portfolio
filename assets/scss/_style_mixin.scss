@@ -1,0 +1,101 @@
+@mixin borderRadius($pos:'',$r:0px) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    @if($pos==''){
+      #{$prefix}border-radius : $r;
+    }
+    @else{
+      #{$prefix}border-#{$pos}-radius : $r;
+    }
+
+  }
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE);
+}
+
+@mixin rotateY($degree) {
+  -ms-transform: rotateY($degree); /* IE 9 */
+  -webkit-transform: rotateY($degree); /* Chrome, Safari, Opera */
+  transform: rotateY($degree);
+}
+/* rotate */
+@mixin rotate($degree) {
+  -ms-transform: rotate($degree); /* IE 9 */
+  -webkit-transform: rotate($degree); /* Chrome, Safari, Opera */
+  transform: rotate($degree);
+}
+
+/* transform */
+@mixin transform( $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}transform: $value;
+  }
+}
+/* transition */
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  transition: $args;
+}
+@mixin no-transition() {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+/* transform-transition */
+@mixin transform-transition($time:1,$delay:0,$bezier:'') {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}transition: #{$prefix}transform #{$time}s cubic-bezier(#{$bezier});
+    #{$prefix}transition-delay: #{$delay}s;
+  }
+}
+@mixin transform-transition-inout($time:1,$delay:0){
+  $bezier: .70, 0, .20, 1;
+  @include transform-transition($time,$delay,$bezier);
+}
+
+/* css-transition */
+@mixin css-value-transition($value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}transition: #{$value};
+  }
+}
+@mixin css-transition($property,$time,$delay,$bezier) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}transition: #{$property} #{$time}s cubic-bezier(#{$bezier});
+    #{$prefix}transition-delay: #{$delay}s;
+  }
+}
+@mixin css-transition-inout($property:all,$time:1,$delay:0){
+  $bezier: .5, 0, .5, 1;
+  @include css-transition($property,$time,$delay,$bezier);
+}
+@mixin css-transition-in($property:all,$time:1,$delay:0){
+  $bezier: .5, 0, 1, .5;
+  @include css-transition($property,$time,$delay,$bezier);
+}
+@mixin css-transition-out($property:all,$time:1,$delay:0){
+  $bezier: 0, .5, .5, 1;
+  @include css-transition($property,$time,$delay,$bezier );
+}
+
+/* transform-css-transition */
+@mixin transform-css-transition($value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}transition: #{$prefix}transform #{$value};
+  }
+}
+
+
+/* line */
+@mixin line($width:1px,$height:1px,$color:#000){
+  width : $width; border-top:#{$height} solid $color;
+}
+
+@mixin lineTop($height:1px,$width:1px,$color:#000){
+  width : $width; height : $height;border-left:#{$width} solid $color;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>A Reflection of Exquisiteness</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../assets/css/common_module_renewal.css">
+    <link rel="stylesheet" href="../../../assets/css/contents_components.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/guide.css">
+    <!--JS-->
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/swiper.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/detectizr.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/detect.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/plugin/jquery.bxslider.min.js"></script>
+
+
+
+
+
+    <!-- 디버깅용 jj -->
+    <script>
+        $(function(){
+
+            var btnDebug = $('.btn-debug');
+            btnDebug.click(function(){
+                $('body').toggleClass('box-debug');
+            })
+
+            var grid= $('.grid-wrap');
+            var btnGrid = $('.btn-grid');
+            /*console.log($('#wrap').height())*/
+            var warpperHeight = $('#wrap').height();
+            grid.find('.grid').css('height', warpperHeight);
+            btnGrid.click(function(){
+                grid.toggle();
+            })
+        })
+    </script>
+    <style>
+        /*임시*/
+       /* .related-stories-wrap .component-list li{
+            margin-top: 0;
+            opacity: 1;
+        }
+        .related-stories-wrap .component-list li dd.img .item figure{
+            opacity: 1;
+        }
+        .related-stories-wrap .component-list li dd.img a{
+            transform:translateY(0) scale(1,1);
+        }
+        .related-stories-wrap .component-list li dt.title,
+        .related-stories-wrap .component-list li dd.desc,
+        .related-stories-wrap .component-list li dd.date{
+            opacity: 1;
+            transform: translateY(0);
+        }*/
+
+    </style>
+</head>
+<body class="components">
+<!-- 디버깅 -->
+<div class="debug-btn-wrap">
+    <button class="btn-debug">박스디버깅</button>
+    <button class="btn-grid">그리드</button>
+</div>
+
+<div class="grid-wrap">
+    <div class="grid">
+        <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>    <div class="cell"></div>
+    </div>
+</div>
+<!-- //디버깅 -->
+
+<div id="skip-navi">
+    <a href="#container">SKIP NAVIGATION</a>
+</div>
+
+<div id="wrap" class="minify">
+    <!--컨텐츠 페이지 디폴트-->
+    <!--HEADER : S-->
+    <div class="header_wrap"></div>
+    <!--HEADER : E-->
+    <div id="container">
+        <div id="content">
+
+            <section class="sec-kv">
+                <div class="vertical-mid-con">
+                    <h1 class="vertical-mid-txt">KV Area</h1>
+                </div>
+            </section>
+
+            <section class="sec-1">
+                <div class="cols-container vertical-mid-con" style="height: calc(100vh - 70px);">
+                    <p class="vertical-mid-txt cols-6 txt-paragraph-small">
+                        Individuality is of utmost importance for Millenvnials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention of those who desire novelty. We hereby introduce the all-new Galaxy Watch that has gone through a remarkable evolution to accompany energetic moments, meaningful days, andcharismatic lives.
+                    </p>
+                </div>
+            </section>
+
+            <section class="sec-2">
+                <div class="is-full motion" motion-pos="0.2">
+                    <div class="img-container" style="padding-top: 50%;">
+                        <div class="img-box">
+                            <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="cols-container space-mt-80">
+                    <h2 class="cols-2 ml-2-col txt-tit-bold motion" motion-pos="0.5">First Cover Story</h2>
+                    <p class="cols-4 space-mt-50-mob-only txt-paragraph-big motion" motion-pos="0.5">
+                        Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles.
+                    </p>
+                    <h3 class="cols-6 ml-2-col txt-tit-centered space-mt-150 motion" motion-pos="0.8">
+                        Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter.
+                    </h3>
+                </div>
+            </section>
+
+            <section class="sec-3">
+                <div class="cols-container space-mt-150 ">
+                    <div class="cols-6 ml-2-col motion" motion-pos="0.5" motion-class="onTrans">
+                        <div class="img-container" style="padding-top: 80%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols-3 ml-2-col space-mt-80 motion" motion-pos="0.5" motion-hide-self="true">
+                        <h3 class="txt-sub-tit-bold">Text only - First</h3>
+                        <p class="txt-paragraph-small space-mt-50">
+                            Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement.
+                        </p>
+                    </div>
+                    <div class="cols-3 space-mt-80 motion" motion-pos="0.5">
+                        <h3 class="txt-sub-tit-bold">Text only - Second</h3>
+                        <p class="txt-paragraph-small space-mt-50">
+                            IIndividuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention of those who desire novelty.
+                        </p>
+                        <span class="txt-disclaimer space-mt-30">
+                                Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter.
+                            </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-4">
+                <div class="cols-container clearfix space-mt-150">
+                    <div class="cols-3 img-float-right mr-1-col motion" motion-pos="0.5">
+                        <div class="img-container" style="padding-top: 70%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols-4 ml-2-col space-mt-80-mob-only motion" motion-pos="0.5">
+                        <h3 class="txt-tit-bold">Image first in DOM</h3>
+                        <p class="txt-paragraph-small space-mt-50">
+                            Individuality is of utmost importance for Millenvnials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention.
+                        </p>
+                    </div>
+                </div>
+                <div class="cols-container space-mt-150">
+                    <div class="cols-3 ml-1-col motion" motion-pos="0.5">
+                        <div class="img-container" style="padding-top: 70%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols-4 motion" motion-pos="0.5">
+                        <h3 class="txt-tit-bold space-mt-80-mob-only">Text first in DOM</h3>
+                        <p class="txt-paragraph-small space-mt-50">
+                            Individuality is of utmost importance for Millenvnials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="sec-5">
+                <div class="is-full space-mt-150 motion" motion-pos="0.2">
+                    <div class="img-container" style="padding-top: 38%;">
+                        <div class="img-box">
+                            <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="cols-container space-mt-80 motion" motion-pos="0.5">
+                    <h2 class="cols-6 ml-2-col txt-tit-bold">Second Cover Story</h2>
+                    <p class="cols-6 ml-2-col space-mt-50 txt-paragraph-big">
+                        Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles.
+                    </p>
+                </div>
+            </section>
+
+            <section class="sec-6">
+                <div class="cols-container space-mt-150">
+                    <div class="cols-3 ml-2-col motion" motion-pos="0.5">
+                        <div class="img-container" style="padding-top: 100%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols-3 space-mt-80-mob-only">
+                        <h3 class="txt-sub-tit-bold motion" motion-pos="0.5">First title text</h3>
+                        <p class="txt-paragraph-small space-mt-50 motion" motion-pos="0.5">
+                            <span class="txt-emphasize" style="color: #2345b0;">Question 1.</span> Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles.Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles. Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles.
+                        </p>
+                        <p class="txt-paragraph-small space-mt-50 motion" motion-pos="0.5">
+                            <span class="txt-emphasize" style="color: #2345b0;">Question 2.</span> Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles. Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-7">
+                <div class="cols-container space-mt-150">
+                    <div class="cols-4 ml-1-col motion" motion-pos="0.5">
+                        <div class="img-container" style="padding-top: 50%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                        <div class="space-mt-80 pl-1-col motion" motion-pos="0.5">
+                            <h3 class="txt-sub-tit-bold">First title text</h3>
+                            <p class="txt-paragraph-small space-mt-50">
+                                Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention of those who desire novelty. Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter. Inspired by the desires of Millennials to become set apart from the crowd and create their own unique lifestyles, the Galaxy Watch has gone through another sturdy process of refinement. The unique design of the bezel and the brilliance of the newly enhanced intelligent Circular UX demand the attention of those who desire novelty.
+                            </p>
+                            <span class="txt-disclaimer space-mt-30">
+                                Individuality is of utmost importance for Millennials, and for them, a wearable device should not be limited to simply making everyday life smarter.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cols-4 space-mt-80-mob-only motion" motion-pos="0.5">
+                        <div class="img-container" style="padding-top: 90%;">
+                            <div class="img-box">
+                                <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/kr/contents/galaxy_home/img/sec3_2_2.jpg')"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <!-- Related Stories -->
+    <div class="related-stories-wrap">
+        <!--<div class="inner-wrap">
+            <div class="dline"></div>
+            <div class="title"><h3>Related Stories</h3></div>
+
+            <ul class="component-list">
+                <li>
+                    <dl>
+                        <dt class="title">
+                            A Simple Text Editor
+                        </dt>
+                        <dd class="desc">
+                            Samsung 2019 Design Samsung 2019 DesignSamsung
+                        </dd>
+                        <dd class="date">
+                            Dec 14. 2018
+                        </dd>
+                        <dd class="img">
+                            <a href="#">
+                                <div class="item">
+                                    <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/didesign/contents_file/ctgbnr_portable_ssd.jpg') "></figure>
+                                </div>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="title">
+                            A Simple Text Editor EditorEditor Editor Editor EditorEditor
+                        </dt>
+                        <dd class="desc">
+                            Samsung Samsung2019 Samsung Samsung2019 Samsung Samsung2019 Samsung Samsung2019Samsung Samsung2019 Samsung Samsung2019
+                        </dd>
+                        <dd class="date">
+                            Dec 14. 2018
+                        </dd>
+                        <dd class="img">
+                            <a href="#">
+                                <div class="item">
+                                    <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/didesign/contents_file/ctgbnr_wearable_package.jpg') "></figure>
+                                </div>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt class="title">
+                            Samsung삼성디자인<br>삼성디자인삼성디자인삼성디자인삼성디자인
+                        </dt>
+                        <dd class="desc">
+                            Samsung삼성디자인<br>삼성디자인삼성디자인
+                        </dd>
+                        <dd class="date">
+                            Dec 14. 2018
+                        </dd>
+                        <dd class="img">
+                            <a href="">
+                                <div class="item">
+                                    <figure class="mod-covered-bg" style="background-image:url('http://design.samsung.com/didesign/contents_file/ctgbnr_pattern_design1.jpg') "></figure>
+                                </div>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>-->
+    </div>
+    <!--<div class="related-stories-wrap"></div>-->
+
+    <!--FOOTER 공통 :s-->
+    <div class="footer_wrap"></div>
+    <!--FOOTER 공통 :e-->
+</div>
+<script type="text/javascript" src="../../../assets/js/common/header.js"></script>
+<script type="text/javascript" src="../../../assets/js/common/footer.js"></script>
+<script type="text/javascript" src="../../../assets/js/common/related_stories.js"></script>
+<script type="text/javascript" src="js/motion.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
+</body>
+</html>
