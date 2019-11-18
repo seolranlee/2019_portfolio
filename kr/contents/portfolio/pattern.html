@@ -132,19 +132,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content-1 space-mt-100">
+                    <div class="content content-1 space-mt-100">
                         <div class="cols-container">
                             <div class="cols-4 ml-3-col">
                                 <p class="txt-paragraph-small">
-                                    갤럭시 s10 출시에 맞춰 제품에 담긴 디자인 철학 및 디자인 스토리를 소개하는 페이지 제작을 담당하였다. 새로운 색인 프리즘 컬러등 s10 기종의 다채로운 컬러들이 유영하듯 흐르는 느낌을 강조하고자 커버 배경에 Shader를 사용하였으며 각 섹션의 대제목에는 svg와 css 키프레임 애니메이션을 조합하여 다채로운 색상조합의 그라디언트가 계속적으로 흘러가는 듯한 효과를 연출하였다. 또한 키비쥬얼 영상에는 contrast와 hue-rotate, blur 값이 지속적으로 변화하는 키프레임 애니메이션을 덧입혀 본래 영상이 지니고 있던 효과를 극대화하고자 하였다. 색상을 강조할 수 있는 이미지에서는 단색으로 가득찬 박스의 마스크가 벗겨지면서 제품이 등장하는 모션을 활용하여 본래 색상이 지니고 있는 선명함을 돋보이게 하고자 하였다.
+                                    갤럭시 s9 출시에 맞춰 제품에 담긴 디자인 철학 및 디자인 스토리를 소개하는 페이지 제작을 담당하였다. 사용자와 스크롤링과 대응되는 레이아웃의 다양한 변화, 갤럭시 s9의 기능을 효과적으로 전달해 줄 수 있는 모션의 설계 및 구현, Canvas와 영상 합성, css 키프레임 애니메이션을 통한 파장효과의 재현 등 삼성의 주력 제품에 대한 페이지인 만큼 다양한 챌린지들과 그에 맞는 기술이 사용된 컨텐츠였다. 물체가 지닌 본래의 본질적인 속성을 벗어나지 않는 자연스러운 모션의 방향성에 대해 많이 생각하게 된 컨텐츠였다.
                                 </p>
 
                             </div>
 
                         </div>
                     </div>
-                    <div class="content-2 space-mt-100">
-                        <div class="cols-container">
+                    <div class="content content-2 space-mt-100">
+                        <div class="cols-container clearfix">
                             <!--<div class="cols-1 ml-3-col">-->
                             <!--<dl>-->
                             <!--<dt class="txt-paragraph-small talign-c">ROLE</dt>-->
@@ -154,7 +154,7 @@
                             <div class="cols-1 ml-3-col">
                                 <dl>
                                     <dt class="txt-paragraph-small talign-c">TECHNOLOGIES</dt>
-                                    <dd class="talign-c space-mt-30">html, js, jQuery, sass, keyframe animation</dd>
+                                    <dd class="talign-c space-mt-30">html, js, jQuery, sass, svg, Shader</dd>
                                 </dl>
                             </div>
                             <div class="cols-1">
@@ -183,30 +183,27 @@
             </section>
 
             <section class="sec-1" id="section-1">
-                <div class="content-1 space-mt-300">
+                <div class="content content-1 space-mt-300">
                     <div class="cols-container">
                         <div class="cols-8 ml-1-col">
-                            <div class="img-container img-1 motion" motion-pos="0.4">
-                                <div class="img-box slide-in-up-1">
-                                    <figure class="mod-covered-bg">
-                                        <figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>
-                                    </figure>
+                            <div class="video-container video-1 motion" motion-pos="0.4">
+                                <div class="video-box slide-in-up">
+                                    <video class="video-keyvisual" muted playsinline autoplay>
+                                        <!--<source type="video/webm">-->
+                                        <source type="video/mp4" src="video/pattern/w/kv.mp4">
+                                    </video>
+                                    <p class="txt-disclaimer talign-c space-mt-30">keyvisual motion</p>
                                 </div>
                             </div>
-                            <div class="img-container img-2 space-mt-100 motion" motion-pos="0.2">
-                                <div class="img-box slide-in-up-1">
-                                    <figure class="mod-covered-bg">
-                                        <figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>
-                                    </figure>
+                            <div class="video-container video-2 motion space-mt-150" motion-pos="0.4">
+                                <div class="video-box slide-in-up">
+                                    <video class="video-keyvisual" muted playsinline autoplay>
+                                        <!--<source type="video/webm">-->
+                                        <source type="video/mp4" src="video/pattern/w/vid_1.mp4">
+                                    </video>
+                                    <p class="txt-disclaimer talign-c space-mt-30">css keyframe motion</p>
                                 </div>
                             </div>
-                            <!--<div class="img-container img-3 space-mt-100 motion" motion-pos=0.4>-->
-                            <!--<div class="img-box zoom-out">-->
-                            <!--<figure class="mod-covered-bg">-->
-                            <!--<figcaption>갤럭시 워치 액티브2의 젠더리스 디자인이 돋보이는 이미지입니다.</figcaption>-->
-                            <!--</figure>-->
-                            <!--</div>-->
-                            <!--</div>-->
                         </div>
                     </div>
                     <div class="cols-container space-mt-300 bottom-container">
@@ -237,9 +234,6 @@
     </div>
 
 </div>
-<!--<script type="text/javascript" src="../../../assets/js/common/header.js"></script>-->
-<!--<script type="text/javascript" src="../../../assets/js/common/footer.js"></script>-->
-<!--<script type="text/javascript" src="../../../assets/js/common/related_stories.js"></script>-->
 <script type="text/javascript" src="js/motion.js"></script>
 <script type="text/javascript" src="js/detail.js"></script>
 <script type="text/javascript" src="js/shader.js"></script>
