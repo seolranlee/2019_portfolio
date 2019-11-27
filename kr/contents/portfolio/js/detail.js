@@ -4,6 +4,8 @@ var Detail = (function() {
         sec1 = $('#section-1');
     var topH;
 
+    var currentPage;
+
     var seckvH;
 
     // 반응형 디바이스 타입
@@ -94,34 +96,72 @@ var Detail = (function() {
 
     var sec1_resize = function() {
 
+        if(currentDeviceType == 'mobile'){
+            if (oldDeviceType !== currentDeviceType) {
+                if(currentPage === 'galaxys10'){
+                    changeVideoSource(vid[0], 'galaxys10/m/kv', false);
+                    changeVideoSource(vid[1], 'galaxys10/m/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxys10/m/vid_2', false);
+                }
+                else if(currentPage === 'galaxyhome'){
+                    changeVideoSource(vid[0], 'galaxy_home/m/kv', false);
+                    changeVideoSource(vid[1], 'galaxy_home/m/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxy_home/m/vid_2', false);
+                }
+                else if(currentPage === 'pattern'){
+                    changeVideoSource(vid[0], 'pattern/m/kv', false);
+                    changeVideoSource(vid[1], 'pattern/m/vid_1', false);
+                }
+                else if(currentPage === 'galaxys9'){
+                    changeVideoSource(vid[0], 'galaxys9/m/kv', false);
+                    changeVideoSource(vid[1], 'galaxys9/m/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxys9/m/vid_2', false);
+                }
+                else{
+                    changeVideoSource(vid[0], 'se9/m/kv', false);
+                    changeVideoSource(vid[1], 'se9/m/sec_1', false);
+                    changeVideoSource(vid[2], 'se9/m/sec_2', false);
+                    changeVideoSource(vid[3], 'se9/m/sec_3', false);
+                    changeVideoSource(vid[4], 'se9/m/sec_4', false);
+                }
+
+            }
+        }else{
+            if (oldDeviceType !== currentDeviceType) {
+                if(currentPage === 'galaxys10'){
+                    changeVideoSource(vid[0], 'galaxys10/w/kv', false);
+                    changeVideoSource(vid[1], 'galaxys10/w/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxys10/w/vid_2', false);
+                }
+                else if(currentPage === 'galaxyhome'){
+                    changeVideoSource(vid[0], 'galaxy_home/w/kv', false);
+                    changeVideoSource(vid[1], 'galaxy_home/w/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxy_home/w/vid_2', false);
+                }
+                else if(currentPage === 'pattern'){
+                    changeVideoSource(vid[0], 'pattern/w/kv', false);
+                    changeVideoSource(vid[1], 'pattern/w/vid_1', false);
+                }
+                else if(currentPage === 'galaxys9'){
+                    changeVideoSource(vid[0], 'galaxys9/w/kv', false);
+                    changeVideoSource(vid[1], 'galaxys9/w/vid_1', false);
+                    changeVideoSource(vid[2], 'galaxys9/w/vid_2', false);
+                }
+                else{
+                    changeVideoSource(vid[0], 'se9/w/kv', false);
+                    changeVideoSource(vid[1], 'se9/w/sec_1', false);
+                    changeVideoSource(vid[2], 'se9/w/sec_2', false);
+                    changeVideoSource(vid[3], 'se9/w/sec_3', false);
+                    changeVideoSource(vid[4], 'se9/w/sec_4', false);
+                }
+            }
+        }
+
     };
 
     var sec1_scroll = function() {
-        // console.log(scrollBottom)
-        // if(scrollBottom > sec1.offset().top){
-        //     if(isHigherSecKv){
-        //         // alert('test')
-        //         seckv.css('position','fixed').css('bottom',0).css('top','auto').css('left',-scrollLeft);
-        //         sec1.css('top', seckvH);
-        //         if(scrollTop <= 0){
-        //             seckv.css('position','relative').css('top',0).css('left',0);
-        //             sec1.css('top', 'auto');
-        //         }
-        //     }else{
-        //         // alert('test')
-        //         seckv.css('position','fixed').css('bottom','auto').css('top',topH).css('left',-scrollLeft);
-        //         sec1.css('top', seckvH);
-        //         if(scrollTop <= 0){
-        //             seckv.css('position','relative').css('top',0).css('left',0);
-        //             sec1.css('top', 'auto');
-        //         }
-        //     }
-        // }else{
-        //     seckv.css('position','relative').css('top',0).css('left',0);
-        //     sec1.css('top', 'auto');
-        // }
-        //
-        //
+
+
         var per = ( (scrollBottom-sec1.find('.bottom-container').offset().top) / secFullH  );
         if( per >= 1){
             per = 1;
@@ -129,25 +169,14 @@ var Detail = (function() {
             per = 0;
         }
 
-        var scalePer = per/5 + 1;
-        console.log(per);
-
 
         if(scrollBottom >= sec1.find('.bottom-container').offset().top){
             $('.dim-holder').css('visibility','visible');
             $('.dim-holder').css('opacity',per);
-            // sec1.find('.bottom-container .img-box').css({'transform': 'scale(' + scalePer + ',' + scalePer + ')'});
-            // sec1.find('.bottom-container .img-box figure').css('background-size', 100+ per*20 + '%' );
         }else{
             $('.dim-holder').css('visibility','hidden');
             $('.dim-holder').css('opacity',0);
         }
-
-
-        // reset
-        // if(scrollBottom < sec1.offset().top){
-        //     // code
-        // }
 
 
     };
@@ -291,6 +320,7 @@ var Detail = (function() {
     };
 
     var _load_init = function(){
+        currentPage = $('#content').attr('page');
         video_init();
         slider_init();
         addEvent();
