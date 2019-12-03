@@ -228,6 +228,14 @@ var Page = (function() {
             });
         });
 
+        sec1.find('.cols-container .txt-wrap-cols a').on('mouseenter',function f() {
+            $(this).parents('.txt-wrap-cols').prev().find('a').addClass('on');
+        });
+
+        sec1.find('.cols-container .txt-wrap-cols a').on('mouseleave',function f() {
+            $(this).parents('.txt-wrap-cols').prev().find('a').removeClass('on');
+        });
+
     };
     var onResize = function(){
         topH = $('#header').height();

@@ -30,6 +30,16 @@ html[lang="ko"] .txt-disclaimer:before{
 			.img-wrap-cols{
 				a{
 					display: block;
+					&:hover{
+						.img-box{
+							@include transform(scale(1.15));
+						}
+					}
+					&.on{
+						.img-box{
+							@include transform(scale(1.15));
+						}
+					}
 				}
 			}
 		}
@@ -182,11 +192,6 @@ header{
 						color: #000;
 						@include opacity(0);
 						@include transform(translate3d(0px, 250px, 0px) rotateX(20deg) rotateY(0deg) scale(0.9));
-						&:hover{
-							color: transparent;
-							text-stroke: 2px #212121;
-							-webkit-text-stroke: 2px #212121;
-						}
 					}
 				}
 				.flip-box{
@@ -494,6 +499,7 @@ header{
 		}
 		@include break-point($tablet-pc) {
 			height: calc(100vh);
+			@include common-convert-device(min-height, 1080);
 			.vertical-mid-con{
 				.cols-4{
 					ul{
@@ -1379,6 +1385,11 @@ header{
 
 				}
 			}
+		}
+	}
+	&.se9{
+		.bottom-container{
+			visibility: hidden;
 		}
 	}
 

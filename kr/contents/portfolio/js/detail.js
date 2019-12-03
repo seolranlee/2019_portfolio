@@ -178,6 +178,18 @@ var Detail = (function() {
             $('.dim-holder').css('opacity',0);
         }
 
+        // if(scrollBottom >= $('.galaxyhome').find('.video-1').offset().top){
+        //     playVid(0);
+        // }
+        //
+        // if(scrollBottom >= $('.galaxyhome').find('.video-2').offset().top){
+        //     playVid(1);
+        // }
+        //
+        // if(scrollBottom >= $('.galaxyhome').find('.video-3').offset().top){
+        //     playVid(2);
+        // }
+
 
     };
 
