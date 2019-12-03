@@ -191,8 +191,8 @@ var Detail = (function() {
 
     function changeVideoSource(video,url,play) {
         var videoSource = $(video).find('source');
-        videoSource.eq(0).attr('src', './video/' + url + '.webm');
-        videoSource.eq(1).attr('src', './video/' + url + '.mp4');
+        videoSource.eq(0).attr('src', 'http://ssd.designfever.com/kr/contents/@old/test/video/' + url + '.webm');
+        videoSource.eq(1).attr('src', 'http://ssd.designfever.com/kr/contents/@old/test/video/' + url + '.mp4');
         video.load();
         if(play === true) video.play();
     }
