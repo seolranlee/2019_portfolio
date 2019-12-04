@@ -1175,6 +1175,7 @@ header{
 								overflow: hidden;
 								span{
 									display: block;
+									color: #000;
 									@include font-device('Open Sans', 80, 100);
 									font-weight: 600;
 									letter-spacing: -0.045em;
@@ -1275,52 +1276,68 @@ header{
 		@include break-point($tablet-pc){
 			.content-1 {
 				.bottom-container{
-					.cols-container{
-						.txt-wrap-cols{
-							h3{
-								a{
-									@include font-device('Open Sans', '','');
-									font-weight: 600;
-									letter-spacing: -0.045em;
-									transition: opacity 1000ms ease 0ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0ms;
-									&:after{
-										display: block;
-										content: '';
-										width: 100%;
-										@include common-convert-device(margin-top, 10);
-										height: 2px;
-										background-color: #fff;
-										@include transform(scaleX(0));
-										@include transform-origin(0, 50%);
-										transition: transform .5s 0s cubic-bezier(.215,.61,.355,1);
-									}
-									&:hover{
-										&:after{
-											@include transform(scaleX(1));
+					.has-bg-con{
+						@include convert-device(height, 500*1.354);
+						.cols-container{
+							.is-full{
+								.img-container{
+									height: 100%;
+									padding: 0;
+									.img-box{
+										figure{
+											background-image: none;
 										}
 									}
 								}
 							}
-							p{
+							.txt-wrap-cols{
+								@include per-convert-pc(padding-top,250,1920*1.354);
+								//@include convert-device(padding-top, 250*1.354);
+								h3{
+									a{
+										@include font-device('Open Sans', '','');
+										font-weight: 600;
+										letter-spacing: -0.045em;
+										transition: opacity 1000ms ease 0ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0ms;
+										&:after{
+											display: block;
+											content: '';
+											width: 100%;
+											@include common-convert-device(margin-top, 10);
+											height: 2px;
+											background-color: #fff;
+											@include transform(scaleX(0));
+											@include transform-origin(0, 50%);
+											transition: transform .5s 0s cubic-bezier(.215,.61,.355,1);
+										}
+										&:hover{
+											&:after{
+												@include transform(scaleX(1));
+											}
+										}
+									}
+								}
+								p{
+									a{
+										@include font-device('Open Sans', '', '');
+										font-weight: 400;
+										letter-spacing: -0.045em;
+										transition: opacity 1000ms ease 0.1s, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0.1s;
+									}
+								}
 								a{
-									@include font-device('Open Sans', '', '');
-									font-weight: 400;
-									letter-spacing: -0.045em;
-									transition: opacity 1000ms ease 0.1s, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0.1s;
+									display: inline-block;
+									@include opacity(0);
+									@include transform(translate3d(0px, 250px, 0px) rotateX(20deg) rotateY(0deg) scale(0.9));
+									color: #fff;
 								}
 							}
-							a{
-								display: inline-block;
-								@include opacity(0);
-								@include transform(translate3d(0px, 250px, 0px) rotateX(20deg) rotateY(0deg) scale(0.9));
-								color: #fff;
-							}
-						}
-						&.onTrans{
-							.txt-wrap-cols{
-								a{
-									@include opacity(1);
-									@include transform(translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1));
+							&.onTrans{
+								.txt-wrap-cols{
+									a{
+										@include opacity(1);
+										@include transform(translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1));
+									}
 								}
 							}
 						}
@@ -1332,56 +1349,72 @@ header{
 		@include break-point($mobile){
 			.content-1 {
 				.bottom-container{
-					.cols-container{
-						.txt-wrap-cols{
-							h3{
-								a{
-									@include font-device('Open Sans', '','');
-									font-weight: 600;
-									letter-spacing: -0.045em;
-									transition: opacity 1000ms ease 0ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0ms;
-									&:after{
-										display: block;
-										content: '';
-										width: 100%;
-										@include common-convert-device(margin-top, 10);
-										height: 2px;
-										background-color: #fff;
-										@include transform(scaleX(0));
-										@include transform-origin(0, 50%);
-										transition: transform .5s 0s cubic-bezier(.215,.61,.355,1);
-									}
-									&:hover{
-										&:after{
-											@include transform(scaleX(1));
+					.has-bg-con{
+						@include vw-convert-mo(height, 500);
+						.cols-container{
+							.is-full{
+								.img-container{
+									height: 100%;
+									padding: 0;
+									.img-box{
+										figure{
+											background-image: none;
 										}
 									}
 								}
 							}
-							p{
+							.txt-wrap-cols{
+								@include vw-convert-mo(padding-top, 200);
+								h3{
+									a{
+										@include font-device('Open Sans', '','');
+										font-weight: 600;
+										letter-spacing: -0.045em;
+										transition: opacity 1000ms ease 0ms, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0ms;
+										&:after{
+											display: block;
+											content: '';
+											width: 100%;
+											@include common-convert-device(margin-top, 10);
+											height: 2px;
+											background-color: #fff;
+											@include transform(scaleX(0));
+											@include transform-origin(0, 50%);
+											transition: transform .5s 0s cubic-bezier(.215,.61,.355,1);
+										}
+										&:hover{
+											&:after{
+												@include transform(scaleX(1));
+											}
+										}
+									}
+								}
+								p{
+									a{
+										@include font-device('Open Sans', '', '');
+										font-weight: 400;
+										letter-spacing: -0.045em;
+										transition: opacity 1000ms ease 0.1s, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0.1s;
+									}
+								}
 								a{
-									@include font-device('Open Sans', '', '');
-									font-weight: 400;
-									letter-spacing: -0.045em;
-									transition: opacity 1000ms ease 0.1s, transform 1000ms cubic-bezier(0, 0.7, 0.29, 0.97) 0.1s;
+									display: inline-block;
+									@include opacity(0);
+									@include transform(translate3d(0px, 250px, 0px) rotateX(20deg) rotateY(0deg) scale(0.9));
+									color: #fff;
 								}
 							}
-							a{
-								display: inline-block;
-								@include opacity(0);
-								@include transform(translate3d(0px, 250px, 0px) rotateX(20deg) rotateY(0deg) scale(0.9));
-								color: #fff;
-							}
-						}
-						&.onTrans{
-							.txt-wrap-cols{
-								a{
-									@include opacity(1);
-									@include transform(translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1));
+							&.onTrans{
+								.txt-wrap-cols{
+									a{
+										@include opacity(1);
+										@include transform(translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1));
+									}
 								}
 							}
 						}
 					}
+
 
 				}
 			}
