@@ -1,0 +1,105 @@
+@charset "utf-8";
+// site common utils
+@import "../../../../assets/scss_renewal/ds_core/importer";
+@import "page_motion";
+
+// 공통 스타일
+
+.header_wrap{
+	height: 0;
+	overflow: hidden;
+}
+html[lang="ko"] .txt-disclaimer:before{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	@include per-convert-pc(margin-right, 10, 1920);
+}
+#content{
+}
+
+body{
+	@include break-point($tablet-pc) {
+		.for-mob{
+			display: none;
+		}
+	}
+	@include break-point($mobile) {
+		.for-web{
+			display: none;
+		}
+	}
+
+}
+
+#container{
+	padding-top: 0 !important;
+}
+
+// 콘텐츠 영역
+#content.main{
+	.circle-container{
+		padding: 50px;
+		.circle-inner{
+			position: relative;
+			width: 480px;
+			height: 240px;
+			.circle{
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 50%;
+				height: 100%;
+				border: 3px solid rgba(63,91,120,1);
+				border-radius: 50%;
+				&.left{
+					left: 0;
+				}
+				&.right{
+					right: 0;
+				}
+			}
+
+		}
+		.pointer{
+			position: absolute;
+			top: 50%;
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-left:110px;
+			margin-top: -10px;
+			background-color: rgba(63,91,120,1);
+			border-radius: 50%;
+			@include animation('myOrbit 4s linear infinite');
+			&:before{
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 40px;
+				height: 40px;
+				@include transform(translate(-50%, -50%));
+				background-color: rgba(63,91,120,0.5);
+				//@include opacity(0.5);
+				border-radius: 50%;
+				border: 1px solid #d9e3ee;
+				@include animation('shadow 2s linear infinite');
+			}
+		}
+	}
+}
+
+@keyframes myOrbit {
+	0% { margin-left:110px;transform: rotate(0deg) translateX(120px)}
+	50%   { margin-left:110px;transform: rotate(360deg) translateX(120px)}
+	50.1%   { margin-left:350px;transform: rotate(180deg) translateX(120px)}
+	100%   { margin-left:350px;transform: rotate(-180deg) translateX(120px)}
+}
+
+
+@keyframes shadow {
+	0% { background-color: rgba(63,91,120,0.5);}
+	50%   { background-color: rgba(63,91,120,0);}
+}
+
