@@ -30,7 +30,7 @@ var Page = (function() {
             get('/data/complete.html').then(renderHtml).then(clickEvent);
         },
         otherwise(page) {
-            root.innerHTML = `${page} Not Found`;
+            return false;
         }
     };
 
@@ -76,11 +76,23 @@ var Page = (function() {
     function renderHtml(html) {
         root.innerHTML = html;
 
+        setTimeout(function () {
+            $('.survey-cont').removeClass('fade-out');
+            $('.img_intro').addClass('onShow');
+            $('.answer').addClass('onShow');
+            $('.question').addClass('onShow');
+        }, 50);
+
+        //intro
+
+
         // step1
         $(":radio[name=use]").click(function(){
             if($(':radio[name=use]:checked').length > 0){
                 $('#step2').attr( 'disabled', false);
             }
+            // $('.step-1 .answer li').removeClass('active');
+            // if($(this).is(":checked")) $(this).parents('li').addClass('active');
         });
         $("#step2").click(function(){
             answers['q1'] = $(':radio[name=use]:checked').val();
@@ -100,6 +112,9 @@ var Page = (function() {
             }else if($(':checkbox[name=reason]:checked').length === 0){
                 $('#step3').attr( 'disabled', true);
             }
+
+            // $('.step-2 .answer li').removeClass('active');
+            // if($(this).is(":checked")) $(this).parents('li').addClass('active');
 
 
             if($(this).val() === '기타'){
