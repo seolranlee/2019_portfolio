@@ -4398,7 +4398,7 @@ var mustUseProp = function (tag, type, attr) {
 var isEnumeratedAttr = makeMap('contenteditable,draggable,spellcheck');
 
 var isBooleanAttr = makeMap(
-  'allowfullscreen,async,autofocus,autoplay,checked,compact,controls,declare,' +
+  'allowfullscreen,async,autofocus,autoplay loop,checked,compact,controls,declare,' +
   'default,defaultchecked,defaultmuted,defaultselected,defer,disabled,' +
   'enabled,formnovalidate,hidden,indeterminate,inert,ismap,itemscope,loop,multiple,' +
   'muted,nohref,noresize,noshade,novalidate,nowrap,open,pauseonexit,readonly,' +
